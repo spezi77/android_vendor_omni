@@ -25,8 +25,8 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
     
 # Copy LowSoundFixer
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/app/LowSoundFixer_v1.0.8.apk:system/priv-app/LowSoundFixer_v1.0.8.apk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/app/LowSoundFixer_v1.0.8.apk:system/priv-app/LowSoundFixer_v1.0.8.apk
 
 # Google latinime
 PRODUCT_COPY_FILES += \
