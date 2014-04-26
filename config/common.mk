@@ -2,8 +2,8 @@ PRODUCT_BRAND ?= omni
 
 # bootanimation (Some devices cant go over 100fps for a bootani)
 ifneq ($(USE_LOWFPS_BOOTANI),true)
-PRODUCT_COPY_FILES += \
-    vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+ PRODUCT_COPY_FILES += \
+     vendor/omni/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
     vendor/omni/prebuilt/bootanimation/lowfps-bootanimation.zip:system/media/bootanimation.zip
@@ -27,10 +27,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false \
     persist.sys.root_access=1
 
-# enable ADB authentication if not on eng build
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
-endif
+# Disable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

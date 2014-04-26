@@ -4,18 +4,18 @@ PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     SoundRecorder \
-    VideoEditor \
     VoiceDialer
 
 # Additional apps
 PRODUCT_PACKAGES += \
-    Apollo \
     audio_effects.conf \
     DashClock \
     DSPManager \
     libcyanogen-dsp \
     MonthCalendarWidget \
     OpenDelta \
+    OmniGears \
+    OmniTorch \
     OmniSwitch
 
 PRODUCT_PACKAGES += \
