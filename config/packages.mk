@@ -38,7 +38,3 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g \
     mkntfs
-
-# Custom apps
-PRODUCT_PACKAGES += \
-    LockClock
