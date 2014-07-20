@@ -39,3 +39,6 @@ PRODUCT_PACKAGES += \
     ntfs-3g \
     mkntfs
 
+# Custom apps
+PRODUCT_PACKAGES += \
+    LockClock

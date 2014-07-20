@@ -23,21 +23,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/app/Term.apk:system/app/Term.apk \
     $(LOCAL_PATH)/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
-    
-# Copy LowSoundFixer
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/app/LowSoundFixer_v1.0.8.apk:system/priv-app/LowSoundFixer_v1.0.8.apk
 
-# Google latinime
+# Copy Slim's latinime + library for gesture typing
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so \
+    $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so \
     $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk
 
-# Copy latinime for gesture typing
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-
-# Workaround - downgrade hostapd for fixing issue with wifi tethering
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bin/hostapd:system/bin/hostapd \
-    $(LOCAL_PATH)/bin/hostapd_cli:system/bin/hostapd_cli
+# Copy prebuilt apps
+PRODUCT_COPY_FILES +=  \
+    $(LOCAL_PATH)/app/Camera2.apk:system/app/Camera2.apk \
+    $(LOCAL_PATH)/app/LowSoundFixer_v1.0.8.apk:system/priv-app/LowSoundFixer_v1.0.8.apk \
+    $(LOCAL_PATH)/app/SlimFileManager.apk:system/app/SlimFileManager.apk
